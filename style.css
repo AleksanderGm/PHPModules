@@ -11,9 +11,14 @@ h1{
 }
 
 .btn {
-    border: 1px solid #000000;
+    border: 1px solid #d55454;
     margin: 2px;
-    padding: 1%;
+    padding: 15px;
+    text-decoration: none;
+    color: #ffffff;
+    background-color:crimson;
+    font-size: 1rem;
+    font-family: 'Courier New', Courier, monospace;
     
 }
 
