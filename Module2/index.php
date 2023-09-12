@@ -12,9 +12,10 @@
     <h1>Modul 2</h1>
     <div class="btndiv">
         <a href="task_1.php" class="btn">Oppgave 1</a>
-        <a href="task_1.php" class="btn">Oppgave 2</a>
-        <a href="task_1.php" class="btn">Oppgave 3</a>
-        <a href="task_1.php" class="btn">Oppgave 4</a>
+        <a href="task_2.php" class="btn">Oppgave 2</a>
+        <a href="task_3.php" class="btn">Oppgave 3</a>
+        <a href="task_4.php" class="btn">Oppgave 4</a>
+        <a href="task_5.php" class="btn">Oppgave 5</a>
 
     </div>
 </div>
