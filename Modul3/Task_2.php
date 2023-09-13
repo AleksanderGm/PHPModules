@@ -9,8 +9,11 @@
 
 <body>
 
+
     <?php
+
     $maksNummer = 10;
+    $totalSum = 0;
 
     for ($i = 0; $i < $maksNummer; $i++) {
 
@@ -18,12 +21,19 @@
         ob_flush();
 
         sleep(1);
-
         echo "<br>Current count: $i";
-
         flush();
 
+        $totalSum += $i;
+        if($i !== 9) {
+
+        } else{
+            sleep(2);
+            echo "<br><br>Totalsummen av tallene er: $totalSum";
+        }
     }
+
+    
     ?>
 
 </body>
