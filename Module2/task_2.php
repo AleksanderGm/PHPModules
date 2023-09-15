@@ -7,7 +7,7 @@
 </head>
 <body>
     <form method="post" action="">
-        <label for="user_input"><b>Skriv inn noe</b></label>
+        <label for="user_input"><b>Skriv inn ditt etternavn</b></label>
         <br>
         <input type="text" name="user_input">
         <input type="submit" value="submit">
