@@ -9,7 +9,7 @@
 
 <body>
     <form action="" method="post">
-        <label for="expiryDate">Write expiry date: </label>
+        <label for="expiryDate">Input expiry date: <br></label>
         <input type="date" name="expiryDate" placeholder="YYYY-MM-DD">
         <input type="submit" value="Check Date">
     </form>
@@ -21,11 +21,11 @@
 
         $expiryDate = $_POST["expiryDate"];
         $currDate = date('Y-m-d');
-        echo "Todays date is " . $expiryDate;
+        echo "<br>Todays date is " . $currDate;
         if ($expiryDate > $currDate) {
-            echo "<br>Expiry date is exceeded";
+            echo "<br><b>Expiry date is exceeded<b>";
         } else {
-            echo "<br>You can still apply for this job";
+            echo "<br><b>You can still apply for this job<b>";
         }
 
     }
