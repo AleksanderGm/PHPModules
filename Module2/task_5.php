@@ -29,36 +29,4 @@ function randomPassword()
 $randomPassword = randomPassword();
 
 echo "Your password is: " . $randomPassword;
-
-
-
-/*
-<?php
-function generatePassword () {
-    $uppercase = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
-    $lowercase = 'abcdefghijklmnopqrstuvwxyz';
-    $number = '0123456789';
-
-    $password = '';
-
-    $password .= $uppercase[rand(0, strlen($uppercase) -1)];
-    $password .= $number[rand(0, strlen($number) -1)];
-
-    $remainingLength = 8 - strlen($password);
-
-    for ($i = 0; $i < $remainingLength; $i++) {
-        $randomChar = $uppercase . $lowercase . $number;
-
-        $password .= $randomChar[rand(0, strlen($randomChar) -1)];
-    }
-
-    return $password;
-}
-
-$newPassword = generatePassword();
-
-echo "You new password is: " . $newPassword;
-*/
-?>
-
 ?>
