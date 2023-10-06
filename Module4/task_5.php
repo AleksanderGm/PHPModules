@@ -8,7 +8,7 @@
 <body>
     <h1>Contact Us</h1>
     <form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>">
-        <label for="name">Name:</label>
+        <label for="name">Navn:</label>
         <input type="text" id="name" name="name" required>
         <br>
 
@@ -16,15 +16,15 @@
         <input type="email" id="email" name="email" required>
         <br>
 
-        <label for="subject">Subject:</label>
+        <label for="subject">Subjekt:</label>
         <input type="text" id="subject" name="subject" required>
         <br>
 
-        <label for="message">Message:</label>
+        <label for="message">Melding:</label>
         <textarea id="message" name="message" rows="4" required></textarea>
         <br>
 
-        <input type="submit" value="Send Message">
+        <input type="submit" value="Send Melding">
     </form>
 
     <?php
@@ -34,11 +34,11 @@
         $subject = $_POST["subject"];
         $message = $_POST["message"];
 
-        echo "<h2>Message Received</h2>";
-        echo "<p><strong>Name:</strong> $name</p>";
+        echo "<h2>Melding Mottat</h2>";
+        echo "<p><strong>Navn:</strong> $name</p>";
         echo "<p><strong>Email:</strong> $email</p>";
-        echo "<p><strong>Subject:</strong> $subject</p>";
-        echo "<p><strong>Message:</strong> $message</p>";
+        echo "<p><strong>Tittel:</strong> $subject</p>";
+        echo "<p><strong>Melding:</strong> $message</p>";
     }
     ?>
 </body>

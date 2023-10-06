@@ -3,62 +3,47 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../style.css">
     <title>Guidance Bookings</title>
-    <style>
-        table {
-            border-collapse: collapse;
-            width: 80%;
-            margin: 20px auto;
-        }
-
-        th, td {
-            border: 1px solid #ccc;
-            padding: 8px;
-            text-align: left;
-        }
-
-        th {
-            background-color: #f2f2f2;
-        }
-    </style>
+    
 </head>
 <body>
     <h1>Guidance Bookings</h1>
     <table>
         <tr>
-            <th>Title</th>
-            <th>Description</th>
+            <th>Tittel</th>
+            <th>Beskrivelse</th>
             <th>Guidance Time</th>
             <th>Place</th>
         </tr>
         <?php
         $guidanceBookings = array(
             array(
-                "Title" => "Career Counseling",
-                "Description" => "Get expert advice on your career path and future opportunities.",
-                "Guidance Time" => "2023-11-20 10:00 AM",
-                "Place" => "Career Center, Room 101",
+                "Tittel" => "Språkkurs Registrering",
+                "Beskrivelse" => "Meld deg på våre språkkurs for å forbedre dine språkferdigheter.",
+                "Veiledningstid" => "2023-11-18 kl. 16:30",
+                "Sted" => "UiA, Bygg 57, Rom 205"
             ),
             array(
-                "Title" => "Study Abroad Consultation",
-                "Description" => "Explore options for studying abroad and international programs.",
-                "Guidance Time" => "2023-11-25 2:30 PM",
-                "Place" => "Student Services, Office 203",
+                "Tittel" => "Studier i Utlandet Rådgivning",
+                "Beskrivelse" => "Utforsk alternativene for å studere i utlandet og internasjonale programmer.",
+                "Veiledningstid" => "2023-11-25 kl. 14:30",
+                "Sted" => "Studenttjenester, Kontor 203"
             ),
             array(
-                "Title" => "Resume Workshop",
-                "Description" => "Learn how to create an impressive resume and land your dream job.",
-                "Guidance Time" => "2023-12-05 3:00 PM",
-                "Place" => "Library Meeting Room",
+                "Tittel" => "Førstehjelpskurs",
+                "Beskrivelse" => "Lær viktige førstehjelpsteknikker og hvordan du kan redde liv i nødsituasjoner.",
+                "Veiledningstid" => "2023-12-20 kl. 10:00",
+                "Sted" => "Helse- og Sikkerhetssenteret"
             )
         );
 
         foreach ($guidanceBookings as $booking) {
             echo "<tr>";
-            echo "<td>" . $booking["Title"] . "</td>";
-            echo "<td>" . $booking["Description"] . "</td>";
-            echo "<td>" . $booking["Guidance Time"] . "</td>";
-            echo "<td>" . $booking["Place"] . "</td>";
+            echo "<td>" . $booking["Tittel"] . "</td>";
+            echo "<td>" . $booking["Beskrivelse"] . "</td>";
+            echo "<td>" . $booking["Veiledningstid"] . "</td>";
+            echo "<td>" . $booking["Sted"] . "</td>";
             echo "</tr>";
         }
         ?>

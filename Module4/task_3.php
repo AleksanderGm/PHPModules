@@ -1,66 +1,56 @@
 <?php
-// Initialize the user profile data
+    require __DIR__ . '/functions.php';
+
+
 $userProfile = array(
     "Name" => "",
     "Email" => "",
     "Mobile" => "",
 );
 
-// Initialize variables for form input and error messages
 $name = $email = $mobile = "";
 $nameErr = $emailErr = $mobileErr = "";
 
-// Check if the form is submitted
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    // Validate name
+    //Navn
     if (empty($_POST["name"])) {
-        $nameErr = "Name is required";
+        $nameErr = "Navn er påkrevd";
     } else {
-        $name = test_input($_POST["name"]);
+        $name = testInput($_POST["name"]);
     }
 
-    // Validate email
+    // Email
     if (empty($_POST["email"])) {
-        $emailErr = "Email is required";
+        $emailErr = "Email er påkrevd";
     } else {
-        $email = test_input($_POST["email"]);
+        $email = testInput($_POST["email"]);
         if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
-            $emailErr = "Invalid email format";
+            $emailErr = "Feil email format";
         }
     }
 
-    // Validate mobile number
+    // Mobil mummer
     if (empty($_POST["mobile"])) {
-        $mobileErr = "Mobile number is required";
+        $mobileErr = "Mobil nummer er påkrevd";
     } else {
-        $mobile = test_input($_POST["mobile"]);
+        $mobile = testInput($_POST["mobile"]);
         if (!preg_match("/^[0-9]{8}$/", $mobile)) {
-            $mobileErr = "Mobile number must be 8 digits";
+            $mobileErr = "Mobil nummer må være 8 sifre";
         }
     }
 
-    // Update the user profile if there are no validation errors
     if (empty($nameErr) && empty($emailErr) && empty($mobileErr)) {
-        // Check if any changes were made
         if ($name != $userProfile["Name"] || $email != $userProfile["Email"] || $mobile != $userProfile["Mobile"]) {
-            // Update the user profile
             $userProfile["Name"] = $name;
             $userProfile["Email"] = $email;
             $userProfile["Mobile"] = $mobile;
 
-            // Inform the user that the profile has been updated
-            $updateMessage = "Profile updated successfully!";
+            $updateMessage = "Profil oppdatert";
         }
     }
 }
 
 // Function to sanitize input
-function test_input($data) {
-    $data = trim($data);
-    $data = stripslashes($data);
-    $data = htmlspecialchars($data);
-    return $data;
-}
 ?>
 
 <!DOCTYPE html>
@@ -102,9 +92,9 @@ function test_input($data) {
     }
     ?>
 
-    <h2>Your Profile:</h2>
-    <p>Name: <?php echo $userProfile["Name"]; ?></p>
+    <h2>Din profil:</h2>
+    <p>Navn: <?php echo $userProfile["Name"]; ?></p>
     <p>Email: <?php echo $userProfile["Email"]; ?></p>
-    <p>Mobile: <?php echo $userProfile["Mobile"]; ?></p>
+    <p>Mobil: <?php echo $userProfile["Mobile"]; ?></p>
 </body>
 </html>
