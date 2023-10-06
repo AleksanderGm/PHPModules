@@ -29,8 +29,7 @@
                 echo '<p class="invalid">Invalid mail </p>';
             }
 
-            echo "/div";
-        }
+    }
 
     ?>
 </body>

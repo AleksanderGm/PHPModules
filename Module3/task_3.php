@@ -5,7 +5,7 @@ function manyYears($rente, $saldo, $years)
     for ($yearNmbr = 1; $yearNmbr <= $years; $yearNmbr++) {
         $saldo = $saldo + ($saldo * $renteSats);
 
-        echo "Etter $years år, er saldoen din: $saldo <br>";
+        echo "Etter $yearNmbr år, er saldoen din: $saldo <br>";
     }
 }
 ?>

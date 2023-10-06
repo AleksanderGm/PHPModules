@@ -23,9 +23,10 @@
         $currDate = date('Y-m-d');
         echo "<br>Todays date is " . $currDate;
         if ($expiryDate > $currDate) {
-            echo "<br><b>Expiry date is exceeded<b>";
-        } else {
             echo "<br><b>You can still apply for this job<b>";
+        } else {
+            echo "<br><b>Expiry date is exceeded<b>";
+
         }
 
     }
